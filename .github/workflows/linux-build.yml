@@ -28,7 +28,7 @@ jobs:
         working-directory: ./gemini-desktop/
 
       - name: Build the Tauri app
-        run: npm run build
+        run: NO_STRIP=true npm run build
         working-directory: ./gemini-desktop/
     
       - name: Upload build artifacts (Linux)
