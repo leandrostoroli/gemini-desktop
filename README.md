@@ -1,5 +1,7 @@
+<div align="center">
+  <img src="assets/gemini-logo.png" alt="Gemini Logo" />
+</div>
 # Gemini Desktop
-
 Gemini Desktop is a Tauri-based application that wraps Google's Gemini web interface into a convenient desktop application.
 
 ## Features
