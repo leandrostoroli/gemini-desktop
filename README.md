@@ -2,6 +2,7 @@
   <img src="assets/gemini-logo.png" alt="Gemini Logo" />
   <p><small>Image source: <a href="https://developers.googleblog.com/en/the-gemini-api-and-the-internet-of-things/">Google Developers Blog</a></small></p>
 </div>
+
 # Gemini Desktop
 Gemini Desktop is a Tauri-based application that wraps Google's Gemini web interface into a convenient desktop application.
 
