@@ -1,0 +1,40 @@
+name: CI - Release (Windows)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v3
+
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+
+      - name: Install dependencies
+        run: |
+          npm install
+        working-directory: ./gemini-desktop/
+
+      - name: Build the Tauri app
+        run: npm run build
+        working-directory: ./gemini-desktop/
+
+      - name: Upload build artifacts (Windows)
+        uses: actions/upload-artifact@v4
+        with:
+          name: tauri-build-windows
+          path: ./gemini-desktop/src-tauri/target/release/bundle/*
+
+      - name: Result
+        run: echo "Build completed on ${{ runner.os }}"
+        working-directory: ./gemini-desktop/
