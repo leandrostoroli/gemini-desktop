@@ -28,9 +28,13 @@ jobs:
         working-directory: ./gemini-desktop/
 
       - name: Build the Tauri app
-        run: NO_STRIP=true npm run build
+        run: NO_STRIP=true npm run build --release
         working-directory: ./gemini-desktop/
-    
+
+      - name: Grant execute permission to AppImage
+        run: |
+          chmod +x ./gemini-desktop/src-tauri/target/release/bundle/appimage/*.AppImage
+
       - name: Upload build artifacts (Linux)
         uses: actions/upload-artifact@v4
         with:
