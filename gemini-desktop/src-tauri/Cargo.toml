@@ -1,8 +1,10 @@
 [package]
 name = "gemini-desktop"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "gemini-desktop"
+authors = [
+    "Levi Lim <shiueo.csh@gmail.com>",
+]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

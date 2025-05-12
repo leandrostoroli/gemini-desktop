@@ -31,10 +31,6 @@ jobs:
         run: NO_STRIP=true npm run build --release
         working-directory: ./gemini-desktop/
 
-      - name: Grant execute permission to AppImage
-        run: |
-          chmod +x ./gemini-desktop/src-tauri/target/release/bundle/appimage/*.AppImage
-
       - name: Upload build artifacts (Linux)
         uses: actions/upload-artifact@v4
         with:
@@ -42,7 +38,6 @@ jobs:
           path: |
             ./gemini-desktop/src-tauri/target/release/bundle/deb/*.deb
             ./gemini-desktop/src-tauri/target/release/bundle/rpm/*.rpm
-            ./gemini-desktop/src-tauri/target/release/bundle/appimage/*.AppImage
 
       - name: Result
         run: echo "Build completed on ${{ runner.os }}"
