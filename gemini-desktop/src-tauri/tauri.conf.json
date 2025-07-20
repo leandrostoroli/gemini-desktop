@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "gemini-desktop",
+  "productName":"Gemini",
   "version": "0.1.0",
   "identifier": "com.shiueo.gemini-desktop",
   "build": {
@@ -15,7 +15,9 @@
       {
         "title": "Gemini",
         "width": 1280,
-        "height": 720
+        "height": 720,
+        "decorations": true,
+        "transparent": true
       }
     ],
     "security": {
